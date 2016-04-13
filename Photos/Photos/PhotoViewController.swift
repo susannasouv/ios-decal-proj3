@@ -38,7 +38,10 @@ class PhotoViewController: UIViewController {
                 usernameLabel.text = userPhotoName
             }
             displayDate(myCurrPhoto.postTime)
+            likeStatus = myCurrPhoto.liked
             setButtonImage()
+            
+//            currPhoto.sizeToFit()
         }
         
         
@@ -70,6 +73,8 @@ class PhotoViewController: UIViewController {
             numberOfLikes += 1
         }
         likeStatus = !likeStatus
+        myPhoto.liked = likeStatus
+        myPhoto.likes = numberOfLikes
         updateLikes()
         setButtonImage()
     }

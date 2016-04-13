@@ -17,7 +17,7 @@ class Photo {
     var username : String!
     var hQurl : String!
     var postTime : String!
-    
+    var liked : Bool = false
     var imageDictionary : NSDictionary!
     /* Parses a NSDictionary and creates a photo object. */
 
@@ -30,6 +30,7 @@ class Photo {
         username = data.valueForKey("user")?.valueForKey("username") as! String
         imageDictionary = data.valueForKey("images") as! NSDictionary
         url = imageDictionary.valueForKey("low_resolution")?.valueForKey("url") as! String
+        print(url)
         hQurl = imageDictionary.valueForKey("standard_resolution")?.valueForKey("url") as! String
         postTime = data.valueForKey("created_time") as! String
     }

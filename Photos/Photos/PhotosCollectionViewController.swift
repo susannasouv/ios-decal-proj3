@@ -72,6 +72,7 @@ class PhotosCollectionViewController: UICollectionViewController {
                         
                         imageView.image = photoImg
                         
+                        
                     }
                     
 //                    // DO NOT CHANGE BELOW
@@ -107,4 +108,5 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
     
 }
+
 
